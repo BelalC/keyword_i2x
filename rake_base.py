@@ -26,8 +26,8 @@ ap.add_argument("-d", "--debug", type=bool, default=False,
 args = vars(ap.parse_args())
 
 # Whether to test/debug the script
-test=args["test"]
-debug=args["debug"]
+test = args["test"]
+debug = args["debug"]
 
 
 # Required functions for RAKE
