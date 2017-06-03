@@ -158,7 +158,6 @@ def calculate_word_scores(phraseList):
 
 def generate_candidate_keyword_scores(phrase_list, word_score, min_keyword_frequency=1):
     keyword_candidates = {}
-
     for phrase in phrase_list:
         if min_keyword_frequency > 1:
             if phrase_list.count(phrase) < min_keyword_frequency:
