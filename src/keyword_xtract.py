@@ -33,7 +33,7 @@ ap.add_argument("-w", "--word_len", type=int, default=4,
                 help="maximum number of words in key word")
 ap.add_argument("-f", "--word_freq", type=int, default=3,
                 help="minimum threshold number of occurrences for key word")
-ap.add_argument("-m", "--model", type=str, default="w2v_models/google_truncated_w2v.zip",
+ap.add_argument("-m", "--model", type=str, default="w2v_models/google_trunc_w2v.gz",
                 help="choice of model or path to user-defined Word2Vec model, default model is a truncated "
                      "version of model trained on Google News dataset")
 ap.add_argument("-t", "--test", type=str, default="data/evaluation/",
@@ -62,7 +62,7 @@ MODELS = {
     "glove_840B": "http://nlp.stanford.edu/data/glove.840B.300d.zip",
     "glove_twitter": "http://nlp.stanford.edu/data/glove.twitter.27B.zip"
 }
-if args["model"] is not "w2v_models/google_truncated_w2v.zip":
+if args["model"] is not "w2v_models/google_trunc_w2v.gz":
     if args["model"] not in MODELS:
         if not path.exists(args["model"]):
             raise AssertionError("The --model command line argument should be a key in the `MODELS` dictionary, "
