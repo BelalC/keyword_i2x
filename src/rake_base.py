@@ -17,7 +17,7 @@ import six
 from six.moves import range
 import argparse
 
-
+"""
 ap = argparse.ArgumentParser()
 ap.add_argument("-t", "--test", type=bool, default=False,
                 help="whether to run a test of all functions required for RAKE")
@@ -28,7 +28,7 @@ args = vars(ap.parse_args())
 # Whether to test/debug the script
 test = args["test"]
 debug = args["debug"]
-
+"""
 
 # Required functions for RAKE
 def is_number(s):
@@ -188,7 +188,7 @@ class Rake(object):
         sorted_keywords = sorted(six.iteritems(keyword_candidates), key=operator.itemgetter(1), reverse=True)
         return sorted_keywords
 
-
+"""
 # Testing + debugging RAKE on pre-defined text block
 if test:
     text = "Compatibility of systems of linear constraints over the set of natural numbers. " \
@@ -227,3 +227,4 @@ if test:
     rake = Rake("stop_words/sklearn_stopwords.txt")
     keywords = rake.run(text)
     print(keywords)
+    """
