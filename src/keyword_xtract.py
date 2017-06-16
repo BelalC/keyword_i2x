@@ -29,7 +29,7 @@ ap.add_argument("-s", "--stopword", type=str, default="data/stop_words/sklearn_s
                 help="path to a list of stop words in text format")
 ap.add_argument("-c", "--char", type=int, default=4,
                 help="minimum number of characters in key word")
-ap.add_argument("-w", "--word_len", type=int, default=4,
+ap.add_argument("-w", "--word_len", type=int, default=5,
                 help="maximum number of words in key word")
 ap.add_argument("-f", "--word_freq", type=int, default=3,
                 help="minimum threshold number of occurrences for key word")
@@ -42,7 +42,7 @@ ap.add_argument("-o", "--output", type=str, default="results/results.txt",
                 help="path to output directory for keyword extraction results")
 ap.add_argument("-n", "--n_keyword", type=percentage, default=50,
                 help="top n%% of extracted keywords to rank; enter an integer between 1 and 100")
-ap.add_argument("-p", "--show_output", type=bool, default=None,
+ap.add_argument("-p", "--print_output", type=bool, default=None,
                 help="whether to print final ranked keywords")
 required_ap = ap.add_argument_group('required arguments')
 required_ap.add_argument("-i", "--input",
@@ -184,7 +184,7 @@ with open(args["output"], "w") as outdir:
         strs = "    score: ".join(str(x) for x in line)
         outdir.write(strs + "\n")
 
-if args["show_output"]:
+if args["print_output"]:
     for line in ranked:
         strs = "    score: ".join(str(x) for x in line)
         print(strs)
