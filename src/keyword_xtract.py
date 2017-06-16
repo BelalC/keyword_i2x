@@ -25,7 +25,7 @@ def percentage(x):
 
 ap = argparse.ArgumentParser()
 
-ap.add_argument("-s", "--stopword", type=str, default="stop_words/sklearn_stopwords.txt",
+ap.add_argument("-s", "--stopword", type=str, default="data/stop_words/sklearn_stopwords.txt",
                 help="path to a list of stop words in text format")
 ap.add_argument("-c", "--char", type=int, default=4,
                 help="minimum number of characters in key word")
@@ -33,20 +33,20 @@ ap.add_argument("-w", "--word_len", type=int, default=4,
                 help="maximum number of words in key word")
 ap.add_argument("-f", "--word_freq", type=int, default=3,
                 help="minimum threshold number of occurrences for key word")
-ap.add_argument("-m", "--model", type=str, default="w2v_models/mini_model.bin.gz",
+ap.add_argument("-m", "--model", type=str, default="w2v_models/GoogleNews-vectors-negative300.bin.gz",
                 help="choice of model or path to user-defined Word2Vec model, default model is a truncated "
                      "version of model trained on Google News dataset")
-ap.add_argument("-t", "--test", type=str, default="evaluation/",
+ap.add_argument("-t", "--test", type=str, default="data/evaluation/",
                 help="path to directory containing test text files used to evaluate relevance of extracted key words")
 ap.add_argument("-o", "--output", type=str, default="results/results.txt",
                 help="path to output directory for keyword extraction results")
 ap.add_argument("-n", "--n_keyword", type=percentage, default=50,
-                help="top n% of extracted keywords to rank; enter an integer between 1 and 100")
+                help="top n%% of extracted keywords to rank; enter an integer between 1 and 100")
 ap.add_argument("-p", "--show_output", type=bool, default=None,
                 help="whether to print final ranked keywords")
 required_ap = ap.add_argument_group('required arguments')
 required_ap.add_argument("-i", "--input",
-                         type=str, default="script.txt",
+                         type=str, default="data/demo/script.txt",
                          help="path to a single document to extract keywords from")
 args = vars(ap.parse_args())
 
