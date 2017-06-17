@@ -191,7 +191,7 @@ if args["print_output"]:
 
 """
 # ================================
-# Include tutorial?
+# Tutorial looking at RAKE
 # ================================
 
 # 1. initialize RAKE by providing a path to a stopwords file
