@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: keyword-xtract
+Version: 0.1.1
+Summary: Keyword extraction with RAKE, and keyword ranking using vector representations - created as partof a toy challenge
+Home-page: https://github.com/BelalC/keyword_i2x
+Author: Belal Chaudhary
+Author-email: belalc80@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/peterldowns/mypackage/archive/0.1.tar.gz
+Description: UNKNOWN
+Keywords: keyword,key phrase,RAKE,word2vec
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5

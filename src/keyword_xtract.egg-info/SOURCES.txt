@@ -1,0 +1,6 @@
+setup.cfg
+setup.py
+src/keyword_xtract.egg-info/PKG-INFO
+src/keyword_xtract.egg-info/SOURCES.txt
+src/keyword_xtract.egg-info/dependency_links.txt
+src/keyword_xtract.egg-info/top_level.txt
