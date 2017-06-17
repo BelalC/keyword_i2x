@@ -3,7 +3,9 @@
 Built this package as a toy challenge to do the following:
 
 1 - Compute the most important key-words (a key-word can be between 1-3 words)
+
 2 - Choose the top n words from the previously generated list. Compare these key- words with all the words occurring in all of the transcripts.
+
 3 - Generate a score (rank) for these top n words based on analysed transcripts.
 
 What this package does:
@@ -16,7 +18,9 @@ What this package does:
     We want to find a way to measure the 'similarity' of each keyword to each test document; as opposed to doing a keyword-to-word comparison,
     it makes more sense to do a keyword-to-paragraph or keyword-to-document comparison! Details of the paragraph or document to vector conversion will be explained below.
 
-3 - Ranks key words by comparing key word vectors with paragraph/document vectors from test corpus - DETAILS COMING SOON.
+3 - Ranks key words by comparing key word vectors with paragraph/document vectors from test corpus
+
+4 - Saves ranked keywords to text file (and/or displays on the console)
     
     
 ---  ---  ---  ---  ---  ---
