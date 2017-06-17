@@ -20,16 +20,23 @@ What this package does:
     
     
 ---  ---  ---  ---  ---  ---
-##Installing dependencies
+## Installing dependencies
 
-The requirements.txt file highlights all dependencies for the project; these can be downloaded via the following command:
+The code was developed with python 3.5 and requires the following libraries/versions:
+
+gensim==2.0.0
+numpy==1.12.1
+scikit-learn==0.18.1
+wget==3.2
+
+These dependencies are specified in requirements.txt, and can be downloaded via the following command:
 
 ```bash
 pip install -r requirements.txt
 ```
 ---  ---  ---  ---  ---  ---
 
-##Usage
+## Usage
 
 Running the keyword_xtract file, will carry out the steps described above (keyword extraction -> compute vector representations -> rank key words)
 
@@ -80,9 +87,11 @@ glove_twitter - Twitter (2B tweets, 27B tokens, 1.2M vocab, uncased, 25d, 50d, 1
 
 Use the labels above as inputs for the '-m/--model' command line arguments. If the selected model is not present, the model will be downloaded; this may take some time. It is also possible to use custom user-defined Word2Vec models by supplying a path to the model.
 
+NOTE - the default evaluation docs provided for ranking keywords are 3 document pages related to food, which were extracted from Wikipedia. Please provide your own relevant evaluation documents for accurate keyword ranking. Otherwise, keywords can simply be extracted and the ranking scores ignored.
+
 ---  ---  ---  ---  ---  ---
 
-##RAKE algorithm + implementation
+## RAKE algorithm + implementation
 
 I modified an existing RAKE implementation to work with Python 3 and different parameters. In this implementation, RAKE does the following:
 
@@ -99,9 +108,9 @@ The source code is released under the MIT License.
 
 ---  ---  ---  ---  ---  ---
 
-##Word2Vec 
+## Word2Vec + Ranking
 
-Utilising gensim and pre-trained Word2Vec models, keyword vector representations are computed. Vector representations of evaluation documents were computed by taking the average of the word vectors present in a specified document. The pairwise cosine similarity between each keyword vector and evaluation document vector are computed and averaged, giving a single score which can be utilised as a 'rank' for the keyword. 
+Utilising gensim and pre-trained Word2Vec models, keyword vector representations are computed. Vector representations of evaluation documents are computed by taking the average of the word vectors present in a specified document. The pairwise cosine similarity between each keyword vector and evaluation document vector are computed and averaged, giving a single score which can be utilised as a 'rank' for the keyword.
 
 	
 Gensim - https://radimrehurek.com/gensim/index.html
